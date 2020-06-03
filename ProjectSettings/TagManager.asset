@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Wake
+    uniqueID: 3883040371
+    locked: 0
+  - name: Ships
+    uniqueID: 2690917769
+    locked: 0
+  - name: GunBase
+    uniqueID: 1612786077
+    locked: 0
+  - name: Guns
+    uniqueID: 3924430093
+    locked: 0
+  - name: Bullets
+    uniqueID: 4039974113
+    locked: 0
