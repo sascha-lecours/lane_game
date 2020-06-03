@@ -23,7 +23,6 @@ public class WeaponScript : MonoBehaviour
     public Vector3 shotOriginOffset = new Vector3(0, 0, 0);
     public Vector2 shotDirection = new Vector2(0, -1);
     public bool aimAtPlayer = false;
-    public int burstShots = 1;
     public float bulletSpread = 0f; // max range to change vectors when shooting
     public float initialShotDelay = 0f;
     public AudioClip shotSound = null;
@@ -42,7 +41,8 @@ public class WeaponScript : MonoBehaviour
     void Start()
     {
         shootCooldown = 0f;
-        myHealthscript = GetComponent<HealthScript>();
+        myHealthscript = GetComponentInParent<HealthScript>();
+        Debug.Log("myhealthscript = " + myHealthscript);
         if (randomizeShotStart)
         {
             shootCooldown = Random.Range(0f, (shootingRate * maxRandomizationCooldownIncrease));
@@ -56,6 +56,9 @@ public class WeaponScript : MonoBehaviour
 
     void Update()
     {
+        if (myHealthscript == null) {
+            myHealthscript = GetComponent<HealthScript>();
+        }
         if (shootCooldown > 0 && myHealthscript.active)
         {
             shootCooldown -= Time.deltaTime;
@@ -82,7 +85,6 @@ public class WeaponScript : MonoBehaviour
             shootCooldown = shootingRate;
             tempShotDirection = shotDirection;
 
-            for (var i = 0; i < burstShots; i++)
             {
                 // Create a new shot
                 var shotTransform = Instantiate(shotPrefab) as Transform;
@@ -112,10 +114,6 @@ public class WeaponScript : MonoBehaviour
                     {
                         move.direction.x = tempShotDirection.x + (Random.Range(-bulletSpread, bulletSpread));
                         move.direction.y = tempShotDirection.y + (Random.Range(-bulletSpread, bulletSpread));
-                        Vector2 swapShotDirection = tempShotDirection; // Used to store temporary values
-                        tempShotDirection.x = swapShotDirection.y; // Rotates tempShot 90 degrees
-                        tempShotDirection.y = -swapShotDirection.x; // These lines rotate 90 degrees
-
                     }
 
                 }

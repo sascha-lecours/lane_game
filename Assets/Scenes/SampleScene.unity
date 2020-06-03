@@ -299,13 +299,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 4375819373184880, guid: 478afe2e1fec9e1459e1bb46d8949fce, type: 3}
-  shootingRate: 0.25
+  shootingRate: 0.025
   shotless: 0
   randomizeShotStart: 0
   shotOriginOffset: {x: 0, y: 0, z: 0}
   shotDirection: {x: 0, y: -1}
   aimAtPlayer: 0
-  burstShots: 1
   bulletSpread: 0
   initialShotDelay: 0
   shotSound: {fileID: 0}
@@ -370,6 +369,8 @@ GameObject:
   - component: {fileID: 1892469227}
   - component: {fileID: 1892469231}
   - component: {fileID: 1892469230}
+  - component: {fileID: 1892469232}
+  - component: {fileID: 1892469233}
   m_Layer: 0
   m_Name: Medium_Ship
   m_TagString: Untagged
@@ -506,3 +507,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1892469232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892469226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6de27a2e1ab33848bc1d297654e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunt_player: 0
+--- !u!114 &1892469233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892469226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b37237a6fe13e46a14080dbb1a3463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  isEnemy: 0
+  active: 0
+  manualActivation: 0
+  deathExplosion: {fileID: 0}
