@@ -174,7 +174,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 4375819373184880, guid: 478afe2e1fec9e1459e1bb46d8949fce, type: 3}
-  shootingRate: 0.025
+  shootingRate: 0.25
   shotless: 0
   randomizeShotStart: 0
   shotOriginOffset: {x: 0, y: 0, z: 0}
@@ -307,7 +307,7 @@ MonoBehaviour:
   aimAtPlayer: 0
   bulletSpread: 0
   initialShotDelay: 0
-  shotSound: {fileID: 0}
+  shotSound: {fileID: 8300000, guid: a36250c66c1ba734eba03de7ca14a174, type: 3}
 --- !u!1 &1315787748
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,10 +337,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4a57c225220ff46a448d58e8c286bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionSounds: []
+  explosionSounds:
+  - {fileID: 8300000, guid: ce157a905875a6e47b12271cab4baeb4, type: 3}
+  - {fileID: 8300000, guid: a98cc55dfd757ff46b4658d8311716a7, type: 3}
   playerShotSounds: []
-  enemyShotSound: {fileID: 0}
-  hitHurtSounds: []
+  hitHurtSounds:
+  - {fileID: 8300000, guid: 528d819814f09a14db42dbb70462598b, type: 3}
+  - {fileID: 8300000, guid: 108d3fa8221e00742829e261db4e5c83, type: 3}
   playerShotVolume: 0.4
 --- !u!4 &1315787750
 Transform:
@@ -390,10 +393,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4736b440c87318b43923eb01774187f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: {x: 0.5, y: 0.5}
-  speed: {x: 2, y: 2}
-  direction: {x: 0.1, y: -0.9}
-  acceleration: 0.2
+  startSpeed: {x: 0.25, y: 0.25}
+  speed: {x: 1, y: 1}
+  direction: {x: 0.9, y: -0.1}
+  acceleration: 0.05
   rotationSpeed: 30
 --- !u!212 &1892469228
 SpriteRenderer:
@@ -533,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  isEnemy: 0
-  active: 0
+  isEnemy: 1
+  active: 1
   manualActivation: 0
   deathExplosion: {fileID: 0}

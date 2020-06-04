@@ -25,11 +25,11 @@ public class MoveScript : MonoBehaviour
 
     void Update()
     {
+        direction.Normalize();
         curSpeed.x = Mathf.Lerp(curSpeed.x, speed.x * direction.x, (acceleration * Time.deltaTime));
         curSpeed.y = Mathf.Lerp(curSpeed.y, speed.y * direction.y, (acceleration * Time.deltaTime));
 
         movement = new Vector2(curSpeed.x, curSpeed.y);
-        movement.Normalize();
         float angle = (Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg) - 90;
         //Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
         //transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * rotationSpeed);

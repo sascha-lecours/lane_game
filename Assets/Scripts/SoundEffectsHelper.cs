@@ -10,7 +10,6 @@ public class SoundEffectsHelper : MonoBehaviour
 
     public AudioClip[] explosionSounds;
     public AudioClip[] playerShotSounds;
-    public AudioClip enemyShotSound;
     public AudioClip[] hitHurtSounds;
     public float playerShotVolume = 0.4f;
     private float hitHurtVolume = 1f;
@@ -48,11 +47,6 @@ public class SoundEffectsHelper : MonoBehaviour
     {
         var i = Random.Range(0, (hitHurtSounds.Length - 1));
         MakeSound(hitHurtSounds[i], hitHurtVolume);
-    }
-
-    public void MakeEnemyShotSound()
-    {
-        MakeSound(enemyShotSound);
     }
 
     public void MakePassedInSound(AudioClip sound)
