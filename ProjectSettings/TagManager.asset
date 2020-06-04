@@ -50,9 +50,9 @@ TagManager:
   - name: GunBase
     uniqueID: 1612786077
     locked: 0
-  - name: Guns
-    uniqueID: 3924430093
-    locked: 0
   - name: Bullets
     uniqueID: 4039974113
+    locked: 0
+  - name: Guns
+    uniqueID: 3924430093
     locked: 0

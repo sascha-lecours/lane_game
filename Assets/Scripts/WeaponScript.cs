@@ -4,36 +4,21 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-
-    //--------------------------------
-    // 1 - Designer variables
-    //--------------------------------
-
-    /// <summary>
-    /// Projectile prefab for shooting
-    /// </summary>
-    public Transform shotPrefab;
-
-    /// <summary>
-    /// Cooldown in seconds between two shots
-    /// </summary>
-    public float shootingRate = 0.25f;
+    
+    public Transform shotPrefab; // Projectile prefab for shooting
+    public float shootingRate = 0.25f; // Cooldown in seconds between two shots
     public bool shotless = false;
     public bool randomizeShotStart = false;
     public Vector3 shotOriginOffset = new Vector3(0, 0, 0);
-    public Vector2 shotDirection = new Vector2(0, -1);
-    public bool aimAtPlayer = false;
     public float bulletSpread = 0f; // max range to change vectors when shooting
-    public float initialShotDelay = 0f;
+    public float initialShotDelay = 0.01f;
     public AudioClip shotSound = null;
+    public bool aimAtTargetObject = false;
+    public Transform myTarget = null;
 
-    private HealthScript myHealthscript;
+    private HealthScript myHealthscript = null;
     private Vector2 tempShotDirection = new Vector2(0, -1);
-    private Transform playerTransform = null;
-
-    //--------------------------------
-    // 2 - Cooldown
-    //--------------------------------
+    private Vector2 facing = new Vector2(0, 1);
 
     private float shootCooldown;
     private float maxRandomizationCooldownIncrease = 0.7f;
@@ -42,27 +27,40 @@ public class WeaponScript : MonoBehaviour
     {
         shootCooldown = 0f;
         myHealthscript = GetComponentInParent<HealthScript>();
-        Debug.Log("myhealthscript = " + myHealthscript);
+
+        if (aimAtTargetObject) //TODO: replace this ## Sets it to just be any old target object during testing
+        {
+            myTarget = GameObject.Find("TargetPoint").transform;
+            if(myTarget) faceTowardObject(myTarget);
+        }
+
         if (randomizeShotStart)
         {
             shootCooldown = Random.Range(0f, (shootingRate * maxRandomizationCooldownIncrease));
         }
-        if (GameObject.FindGameObjectWithTag("Player") != null)
-        {
-            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        }
         shootCooldown += initialShotDelay;
+    }
+
+    void faceTowardObject(Transform t)
+    {
+        var directionVector = new Vector2(0, 0);
+        directionVector = t.position - transform.position;
+        directionVector.Normalize();
+        var angle = Mathf.Atan2(directionVector.y, directionVector.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
     }
 
     void Update()
     {
-        if (myHealthscript == null) {
-            myHealthscript = GetComponent<HealthScript>();
+        if (aimAtTargetObject && myTarget)
+        {
+            faceTowardObject(myTarget);
         }
-        if (shootCooldown > 0 && myHealthscript.active)
+            if (shootCooldown > 0 && myHealthscript.active)
         {
             shootCooldown -= Time.deltaTime;
         }
+
     }
 
     public Vector2 Vector2FromAngle(float a)
@@ -71,20 +69,19 @@ public class WeaponScript : MonoBehaviour
         return new Vector2(Mathf.Cos(a), Mathf.Sin(a));
     }
 
-    //--------------------------------
-    // 3 - Shooting from another script
-    //--------------------------------
 
-    /// <summary>
     /// Create a new projectile if possible
-    /// </summary>
     public void Attack(bool isEnemy)
     {
         if (!shotless & CanAttack)
         {
+            if (aimAtTargetObject && myTarget)
+            {
+                faceTowardObject(myTarget);
+            }
+            facing = new Vector2(transform.up.x, transform.up.y) * -1; // Assumes sprite faces downward
+            facing.Normalize();
             shootCooldown = shootingRate;
-            tempShotDirection = shotDirection;
-
             {
                 // Create a new shot
                 var shotTransform = Instantiate(shotPrefab) as Transform;
@@ -92,25 +89,18 @@ public class WeaponScript : MonoBehaviour
                 // Assign position
                 shotTransform.position = transform.position + shotOriginOffset;
 
+                // Assign direction to match turret
+                tempShotDirection = facing;
+
                 ShotScript shot = shotTransform.gameObject.GetComponent<ShotScript>();
                 if (shot != null)
                 {
                     shot.isEnemyShot = isEnemy;
                 }
 
-                // Make the weapon shot always towards it
                 MoveScript move = shotTransform.gameObject.GetComponent<MoveScript>();
                 if (move != null)
                 {
-                    if (aimAtPlayer && playerTransform)
-                    {
-                        var directionVector = new Vector2(0, 0);
-                        directionVector = playerTransform.position - shotTransform.position;
-                        directionVector.Normalize();
-                        move.direction.x = directionVector.x + (Random.Range(-bulletSpread, bulletSpread));
-                        move.direction.y = directionVector.y + (Random.Range(-bulletSpread, bulletSpread));
-                    }
-                    else
                     {
                         move.direction.x = tempShotDirection.x + (Random.Range(-bulletSpread, bulletSpread));
                         move.direction.y = tempShotDirection.y + (Random.Range(-bulletSpread, bulletSpread));
