@@ -56,3 +56,6 @@ TagManager:
   - name: Guns
     uniqueID: 3924430093
     locked: 0
+  - name: UI
+    uniqueID: 1702378765
+    locked: 0
