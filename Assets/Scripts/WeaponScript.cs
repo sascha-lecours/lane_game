@@ -28,7 +28,7 @@ public class WeaponScript : MonoBehaviour
         shootCooldown = 0f;
         myHealthscript = GetComponentInParent<HealthScript>();
 
-        if (aimAtTargetObject) //TODO: replace this ## Sets it to just be any old target object during testing
+        if (aimAtTargetObject) //TODO: replace this ## Sets it to just be any old target object during testing. Should get it from... healthscript?
         {
             myTarget = GameObject.Find("TargetPoint").transform;
             if(myTarget) faceTowardObject(myTarget);

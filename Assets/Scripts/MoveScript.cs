@@ -12,7 +12,6 @@ public class MoveScript : MonoBehaviour
     public Vector2 speed = new Vector2(10f, 10f);
     public Vector2 direction = new Vector2(-1, 0);
     public float acceleration = 1f;
-    public float rotationSpeed = 0.01f;
     private Vector2 curSpeed = new Vector2(0f, 0f);
     private Vector2 movement;
     private Rigidbody2D rigidbodyComponent;
