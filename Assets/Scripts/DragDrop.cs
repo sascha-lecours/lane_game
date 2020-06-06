@@ -3,6 +3,7 @@ using System.Collections;
 
 public class DragDrop : MonoBehaviour
 {
+    public string snapHotkey = null;
     // The plane the object is currently being dragged on
     private Plane dragPlane;
 
@@ -29,10 +30,26 @@ public class DragDrop : MonoBehaviour
 
     void OnMouseDrag()
     {
+        snapToMousePosition();
+    }
+
+    void snapToMousePosition()
+    {
         Ray camRay = myMainCamera.ScreenPointToRay(Input.mousePosition);
 
         float planeDist;
         dragPlane.Raycast(camRay, out planeDist);
         transform.position = camRay.GetPoint(planeDist) + offset;
+    }
+
+    void Update()
+    {
+        if (snapHotkey != null)
+        {
+            if (Input.GetKeyDown(snapHotkey))
+            {
+                snapToMousePosition();
+            }
+        }
     }
 }
