@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e451189c6df5f314c931085e6d61fe05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapHotkey: q
+  snapHotkey: mouse 0
 --- !u!61 &6593486301991024311
 BoxCollider2D:
   m_ObjectHideFlags: 0
