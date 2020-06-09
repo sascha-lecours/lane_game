@@ -9,7 +9,7 @@ public class DirectionArrowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mySpawner = GameObject.Find("ShipSpawner").transform;
+        mySpawner = GameObject.Find("FriendlyShipSpawner").transform;
     }
 
     void faceAwayFromObject(Transform t)

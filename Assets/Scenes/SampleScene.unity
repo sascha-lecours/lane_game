@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleSpawns:
-  - {fileID: 7352479403659095009, guid: c2cbf300b4022a44a9310fd7a1102278, type: 3}
-  initialSpawnInterval: 4
+  - {fileID: 1702382378423205985, guid: 16261ece1c867084bbd50d34c8043a7b, type: 3}
+  initialSpawnInterval: 4.5
 --- !u!4 &234005393
 Transform:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234005391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.87, y: 0.44, z: -5.2854056}
+  m_LocalPosition: {x: 13, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 547760711}
   - component: {fileID: 547760713}
   m_Layer: 0
-  m_Name: ShipSpawner
+  m_Name: FriendlyShipSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -408,12 +408,12 @@ PrefabInstance:
     - target: {fileID: 355252614856726178, guid: cb105a78a04283045a4bf0a025c142c6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.44
+      value: 1.27
       objectReference: {fileID: 0}
     - target: {fileID: 355252614856726178, guid: cb105a78a04283045a4bf0a025c142c6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.18
+      value: 4.13
       objectReference: {fileID: 0}
     - target: {fileID: 355252614856726178, guid: cb105a78a04283045a4bf0a025c142c6,
         type: 3}
@@ -546,12 +546,12 @@ PrefabInstance:
     - target: {fileID: 6593486301991024313, guid: ebbfb426dccf24f40b8629f2ec8f81ff,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.04
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 6593486301991024313, guid: ebbfb426dccf24f40b8629f2ec8f81ff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 6593486301991024313, guid: ebbfb426dccf24f40b8629f2ec8f81ff,
         type: 3}
