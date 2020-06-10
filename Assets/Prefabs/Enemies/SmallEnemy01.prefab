@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   isEnemy: 1
-  active: 1
+  active: 0
   manualActivation: 0
   deathExplosion: {fileID: 0}
 --- !u!50 &7352479403659095015

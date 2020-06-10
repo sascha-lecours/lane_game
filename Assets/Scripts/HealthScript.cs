@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,12 +19,18 @@ public class HealthScript : MonoBehaviour
     private Material matDefault;
     private SpriteRenderer sr;
     private float flashInterval = 0.1f;
+    private float fadeLifetime = 1f; // Amount of time after going offscreen to continue existing
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         matWhite = Resources.Load("flashWhite", typeof(Material)) as Material;
         matDefault = sr.material;
+    }
+
+    void fadeAway() // No death explosion
+    {
+        Destroy(gameObject);
     }
 
     /// Inflicts damage, flash sprite, and check if the object should be destroyed
@@ -74,18 +81,24 @@ public class HealthScript : MonoBehaviour
             }
         }
 
-        // Is this the activator object?
-        //ActivatorScript activator = otherCollider.gameObject.GetComponent<ActivatorScript>();
-        //if (activator != null)
-        //{
-        //    if (activator.isActivator && !manualActivation)
-        //    {
-        //        active = true;
-        //    }
-        //    else if (!manualActivation) // If it has an activator script but not isActivator, it's a deactivator
-        //    {
-        //        active = false;
-        //    }
-        //}
+        //Is this the activator object?
+       ActivatorScript activator = otherCollider.gameObject.GetComponent<ActivatorScript>();
+        if (activator != null && !manualActivation && !active)
+        {
+            if (activator.isActivator)
+            {
+                active = true;
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D otherCollider)
+    {
+        ActivatorScript activator = otherCollider.gameObject.GetComponent<ActivatorScript>();
+        if (activator != null && !manualActivation && active)
+        {
+            active = false;
+            Invoke("fadeAway", fadeLifetime); // Vanish without explosion after a short time
+        }
     }
 }

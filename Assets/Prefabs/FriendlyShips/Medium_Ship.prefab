@@ -209,7 +209,6 @@ MonoBehaviour:
   speed: {x: 1, y: 1}
   direction: {x: 0.9, y: -0.1}
   acceleration: 200
-  rotationSpeed: 30
 --- !u!50 &8805503776283662159
 Rigidbody2D:
   serializedVersion: 4
@@ -271,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   isEnemy: 0
-  active: 1
+  active: 0
   manualActivation: 0
   deathExplosion: {fileID: 0}
 --- !u!114 &8805503776283662160
