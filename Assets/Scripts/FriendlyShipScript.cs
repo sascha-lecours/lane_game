@@ -38,4 +38,31 @@ public class FriendlyShipScript : MonoBehaviour
         directionVector.Normalize();
         return directionVector;
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        var tookDamage = false;
+        var damageAmount = 0;
+        Debug.Log("collided with " + collision);
+
+        // Collision with enemy
+        EnemyScript enemy = collision.gameObject.GetComponent<EnemyScript>();
+        if (enemy != null)
+        {
+            Debug.Log("collided with " + enemy);
+            // Kill the enemy
+            HealthScript enemyHealth = enemy.GetComponent<HealthScript>();
+            if (enemyHealth != null) enemyHealth.Damage(100);
+
+            tookDamage = true;
+            damageAmount = enemy.collisionDamage;
+        }
+
+        // Damage the player
+        if (tookDamage)
+        {
+            HealthScript myHealth = this.GetComponent<HealthScript>();
+            if (myHealth != null) myHealth.Damage(damageAmount);
+        }
+    }
 }

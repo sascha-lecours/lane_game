@@ -79,15 +79,16 @@ public class HealthScript : MonoBehaviour
                 Damage(shot.damage);
                 shot.onImpact(gameObject.transform);
             }
-        }
-
-        //Is this the activator object?
-       ActivatorScript activator = otherCollider.gameObject.GetComponent<ActivatorScript>();
-        if (activator != null && !manualActivation && !active)
+        } else
         {
-            if (activator.isActivator)
+            //Is this the activator object?
+            ActivatorScript activator = otherCollider.gameObject.GetComponent<ActivatorScript>();
+            if (activator != null && !manualActivation && !active)
             {
-                active = true;
+                if (activator.isActivator)
+                {
+                    active = true;
+                }
             }
         }
     }
