@@ -38,7 +38,7 @@ public class ShotScript : MonoBehaviour
         }
         // Play impact sound
         myTargetHealthScript = target.gameObject.GetComponent<HealthScript>();
-        if (myTargetHealthScript != null && myTargetHealthScript.active)
+        if (myTargetHealthScript != null && myTargetHealthScript.active && !myTargetHealthScript.immuneToShots)
             SoundEffectsHelper.Instance.MakeHitHurtSound();
 
         Destroy(gameObject);

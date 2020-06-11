@@ -12,6 +12,7 @@ public class HealthScript : MonoBehaviour
     public bool isEnemy = true;
     public bool active = false;
     public bool manualActivation = false; // Used for bosses etc. to prevent activation by the usual method
+    public bool immuneToShots = false;
 
     public Transform deathExplosion;
 
@@ -71,7 +72,7 @@ public class HealthScript : MonoBehaviour
     {
         // Is this a shot?
         ShotScript shot = otherCollider.gameObject.GetComponent<ShotScript>();
-        if (shot != null)
+        if (shot != null && !immuneToShots)
         {
             // Avoid friendly fire
             if (shot.isEnemyShot != isEnemy)
