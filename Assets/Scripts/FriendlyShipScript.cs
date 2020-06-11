@@ -17,12 +17,12 @@ public class FriendlyShipScript : MonoBehaviour
         if (myDestination != null && myMoveScript != null)
         {
             myMoveScript.direction = GetVector2PointingAtTarget(myDestination);
-            faceTowardObject(myDestination);
+            FaceTowardObject(myDestination);
         }
         
     }
 
-    void faceTowardObject(Transform t)
+    void FaceTowardObject(Transform t)
     {
         var directionVector = new Vector2(0, 0);
         directionVector = t.position - transform.position;
