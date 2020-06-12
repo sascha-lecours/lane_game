@@ -6,11 +6,15 @@ using UnityEngine;
 
 public class FriendlySpawnerScript : MonoBehaviour
 {
-    public float spawnInterval = 0.25f;
-    private float spawnCooldown;
-    
+    public float spawnInterval1 = 0.25f;
+    public float spawnInterval2 = 0.25f;
+
+    private float spawnCooldown1;
+    private float spawnCooldown2;
+
 
     public Transform UnitType1;
+    public Transform UnitType2;
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +40,21 @@ public class FriendlySpawnerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spawnCooldown += Time.deltaTime;
+        spawnCooldown1 += Time.deltaTime;
+        spawnCooldown2 += Time.deltaTime;
+
         if (Input.GetKeyDown("1"))
         {
-            if(spawnCooldown >= spawnInterval)
+            if(spawnCooldown1 >= spawnInterval1)
             {
                 spawnUnit(UnitType1);
+            }
+        }
+        if (Input.GetKeyDown("2"))
+        {
+            if (spawnCooldown2 >= spawnInterval2)
+            {
+                spawnUnit(UnitType2);
             }
         }
     }

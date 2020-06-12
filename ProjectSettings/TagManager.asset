@@ -44,6 +44,9 @@ TagManager:
   - name: Wake
     uniqueID: 3883040371
     locked: 0
+  - name: Torpedoes
+    uniqueID: 4062424829
+    locked: 0
   - name: Ships
     uniqueID: 2690917769
     locked: 0
@@ -55,6 +58,9 @@ TagManager:
     locked: 0
   - name: Guns
     uniqueID: 3924430093
+    locked: 0
+  - name: Aircraft
+    uniqueID: 2377636073
     locked: 0
   - name: UI
     uniqueID: 1702378765
