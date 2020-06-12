@@ -43,13 +43,11 @@ public class FriendlyShipScript : MonoBehaviour
     {
         var tookDamage = false;
         var damageAmount = 0;
-        Debug.Log("collided with " + collision);
 
         // Collision with enemy
         EnemyScript enemy = collision.gameObject.GetComponent<EnemyScript>();
         if (enemy != null)
         {
-            Debug.Log("collided with " + enemy);
             // Kill the enemy
             HealthScript enemyHealth = enemy.GetComponent<HealthScript>();
             if (enemyHealth != null) enemyHealth.Damage(100);
