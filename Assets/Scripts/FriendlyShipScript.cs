@@ -19,7 +19,7 @@ public class FriendlyShipScript : MonoBehaviour
             myMoveScript.direction = GetVector2PointingAtTarget(myDestination);
             FaceTowardObject(myDestination);
         }
-        
+
     }
 
     void FaceTowardObject(Transform t)

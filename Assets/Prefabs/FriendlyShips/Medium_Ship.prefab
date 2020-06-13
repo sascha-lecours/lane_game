@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8805503775816859473}
   - component: {fileID: 8805503775816859475}
   - component: {fileID: 8805503775816859474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MediumGunFore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -370537203
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f4a31fda5cc968445b74f74ef9173ec3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 8805503776283662161}
   - component: {fileID: 8805503776283662160}
   - component: {fileID: 8805503776283662162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Medium_Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1604049527
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4b46be9939b1f614d807a373b11bedcc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -272,6 +272,7 @@ MonoBehaviour:
   isEnemy: 0
   active: 0
   manualActivation: 0
+  immuneToShots: 0
   deathExplosion: {fileID: 0}
 --- !u!114 &8805503776283662160
 MonoBehaviour:
@@ -309,7 +310,7 @@ GameObject:
   - component: {fileID: 8805503776524743787}
   - component: {fileID: 8805503776524743789}
   - component: {fileID: 8805503776524743788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MediumGunAft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +390,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -370537203
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f4a31fda5cc968445b74f74ef9173ec3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
