@@ -6,12 +6,23 @@ using UnityEngine;
 public class FriendlyShipScript : MonoBehaviour
 {
     public Transform myDestination = null;
+    public bool cargoShip = false;
+
     private MoveScript myMoveScript = null;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        myDestination = GameObject.Find("DestinationPoint").transform;
+        if (!cargoShip)
+        {
+             myDestination = GameObject.Find("DestinationPoint").transform;
+        }
+        else
+        {
+            myDestination = GameObject.Find("CargoShipDestinationPoint").transform;
+        }
         myMoveScript = GetComponent<MoveScript>();
 
         if (myDestination != null && myMoveScript != null)
@@ -56,7 +67,6 @@ public class FriendlyShipScript : MonoBehaviour
             damageAmount = enemy.collisionDamage;
         }
 
-        // Damage the player
         if (tookDamage)
         {
             HealthScript myHealth = this.GetComponent<HealthScript>();
