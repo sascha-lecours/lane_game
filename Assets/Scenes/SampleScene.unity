@@ -467,12 +467,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a34f0bdc85c864fac0349afd359ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnInterval1: 0.25
+  unitType1: {fileID: 8805503776283662157, guid: d18e318e3c9a5d343a69ec4a2237bd56,
+    type: 3}
+  unitType2: {fileID: 3226456237162075301, guid: 4d9ba2b5ca03b5147a7f340f978ec485,
+    type: 3}
+  spawnInterval1: 0.45
   spawnInterval2: 0.25
-  UnitType1: {fileID: 8805503776283662157, guid: d18e318e3c9a5d343a69ec4a2237bd56,
-    type: 3}
-  UnitType2: {fileID: 3226456237162075301, guid: 4d9ba2b5ca03b5147a7f340f978ec485,
-    type: 3}
+  rebuildTime1: 2.5
+  rebuildTime2: 1.5
+  maxSupply1: 6
+  maxSupply2: 4
+  startSupply1: 4
+  startSupply2: 2
+  curSupply1: 0
+  curSupply2: 0
 --- !u!1 &1593397450
 GameObject:
   m_ObjectHideFlags: 0
