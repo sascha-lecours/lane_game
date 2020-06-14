@@ -76,6 +76,7 @@ public class FriendlySpawnerScript : MonoBehaviour
     {
         Spawnables[0] = new PlayerSpawnableType(unitType1, spawnInterval1, rebuildTime1, maxSupply1, startSupply1);
         Spawnables[1] = new PlayerSpawnableType(unitType2, spawnInterval2, rebuildTime2, maxSupply2, startSupply2);
+        AdjustUI();
     }
 
     void AdjustUI()
@@ -100,24 +101,45 @@ public class FriendlySpawnerScript : MonoBehaviour
 
     void TrytoSpawn(int index)
     {
-        if(Spawnables[index].SpawnCooldown >= Spawnables[index].SpawnInterval)
+        var s = Spawnables[index];
+        if (s.SpawnCooldown >= s.SpawnInterval)
         {
-            spawnUnit(Spawnables[index].UnitType);
-            Spawnables[index].SpawnCooldown = 0;
+            if(s.CurSupply > 0)
+            {
+                spawnUnit(s.UnitType);
+                s.SpawnCooldown = 0;
+                s.CurSupply -= 1;
+                AdjustUI();
+            }
+            
+        }
+    }
+
+    void IncrementTimersAndBuild()
+    {
+        for (var i = 0; i < Spawnables.Length; i++)
+        {
+            var s = Spawnables[i];
+            s.SpawnCooldown += Time.deltaTime;
+
+            if (s.CurSupply < s.MaxSupply)
+            {
+                s.RebuildTimer += Time.deltaTime;
+                if (s.RebuildTimer >= s.RebuildTime)
+                {
+                    s.CurSupply += 1;
+                    s.RebuildTimer = 0;
+                    AdjustUI();
+                }
+            }
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        for(var i=0; i<Spawnables.Length; i++)
-        {
-            Spawnables[i].SpawnCooldown += Time.deltaTime;
-            Spawnables[i].RebuildTimer += Time.deltaTime;
-        }
-
-        AdjustUI();
-
+        IncrementTimersAndBuild();
+        
 
         if (Input.GetKeyDown("1"))
         {
