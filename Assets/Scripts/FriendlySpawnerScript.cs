@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using System.Security.Principal;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerSpawnableType
 {
@@ -66,7 +67,7 @@ public class FriendlySpawnerScript : MonoBehaviour
     public int curSupply1;
     public int curSupply2;
 
-
+    public Text txt = null;
 
 
 
@@ -77,7 +78,14 @@ public class FriendlySpawnerScript : MonoBehaviour
         Spawnables[1] = new PlayerSpawnableType(unitType2, spawnInterval2, rebuildTime2, maxSupply2, startSupply2);
     }
 
-
+    void AdjustUI()
+    {
+        var ship1 = Spawnables[0].CurSupply;
+        var shipMax1 = Spawnables[0].MaxSupply;
+        var ship2 = Spawnables[1].CurSupply;
+        var shipMax2 = Spawnables[1].MaxSupply;
+        txt.text = $"Gunboats: {ship1}/{shipMax1}\nTorpedoes: {ship2}/{shipMax2}";
+    }
 
     void spawnUnit(Transform s)
     {
@@ -107,6 +115,8 @@ public class FriendlySpawnerScript : MonoBehaviour
             Spawnables[i].SpawnCooldown += Time.deltaTime;
             Spawnables[i].RebuildTimer += Time.deltaTime;
         }
+
+        AdjustUI();
 
 
         if (Input.GetKeyDown("1"))
