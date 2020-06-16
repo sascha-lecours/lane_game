@@ -4831,7 +4831,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 86da491bdc550e14c80f1bb9321931ac, type: 3}
-  m_Color: {r: 0, g: 0.4530723, b: 0.5283019, a: 1}
+  m_Color: {r: 0, g: 0.5566038, b: 0.5343544, a: 0.5176471}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4874,6 +4874,7 @@ MonoBehaviour:
   active: 0
   manualActivation: 0
   immuneToShots: 1
+  damagedSprite: {fileID: 0}
   deathExplosion: {fileID: 0}
 --- !u!50 &3226456237162075299
 Rigidbody2D:
@@ -4935,3 +4936,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myDestination: {fileID: 0}
+  cargoShip: 0

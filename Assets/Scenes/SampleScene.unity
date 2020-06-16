@@ -294,9 +294,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9773e448822c62c4e80dbf60bcb24289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleSpawns:
+  easySpawns:
   - {fileID: 1702382378423205985, guid: 16261ece1c867084bbd50d34c8043a7b, type: 3}
+  mediumSpawns:
   - {fileID: 771032215213568465, guid: 40a98840c603ab34499bb853fb3f7c45, type: 3}
+  - {fileID: 1702382378423205985, guid: 16261ece1c867084bbd50d34c8043a7b, type: 3}
+  hardSpawns:
+  - {fileID: 771032215213568465, guid: 40a98840c603ab34499bb853fb3f7c45, type: 3}
+  numberOfEasyWaves: 4
+  numberOfMediumWaves: 10
+  numberOfHardWaves: 10
   initialSpawnInterval: 4.5
 --- !u!4 &234005393
 Transform:
@@ -617,12 +624,12 @@ MonoBehaviour:
     type: 3}
   spawnInterval1: 0.45
   spawnInterval2: 0.25
-  rebuildTime1: 2.5
-  rebuildTime2: 1.5
-  maxSupply1: 6
-  maxSupply2: 4
-  startSupply1: 4
-  startSupply2: 2
+  rebuildTime1: 4
+  rebuildTime2: 3
+  maxSupply1: 4
+  maxSupply2: 6
+  startSupply1: 3
+  startSupply2: 3
   curSupply1: 0
   curSupply2: 0
   txt: {fileID: 99285882}
@@ -1160,6 +1167,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593486301991024313, guid: ebbfb426dccf24f40b8629f2ec8f81ff,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593486301991024313, guid: ebbfb426dccf24f40b8629f2ec8f81ff,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6593486301991024315, guid: ebbfb426dccf24f40b8629f2ec8f81ff,
         type: 3}
