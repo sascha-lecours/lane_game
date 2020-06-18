@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1859418452}
   - component: {fileID: 1859418451}
   m_Layer: 0
-  m_Name: water_ripple_medium_000
+  m_Name: water_ripple_medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 4375819373184880, guid: 478afe2e1fec9e1459e1bb46d8949fce, type: 3}
-  shootingRate: 0.85
+  shootingRate: 1
   shotless: 0
   randomizeShotStart: 0
   shotOriginOffset: {x: 0, y: 0, z: 0}
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 4375819373184880, guid: 478afe2e1fec9e1459e1bb46d8949fce, type: 3}
-  shootingRate: 0.85
+  shootingRate: 1
   shotless: 0
   randomizeShotStart: 0
   shotOriginOffset: {x: 0, y: 0, z: 0}

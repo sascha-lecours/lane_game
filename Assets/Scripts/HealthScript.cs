@@ -21,7 +21,7 @@ public class HealthScript : MonoBehaviour
     private Material matDefault;
     private SpriteRenderer sr;
     private float flashInterval = 0.1f;
-    private float fadeLifetime = 0.01f; // Amount of time after going offscreen to continue existing
+    private float fadeLifetime = 0.5f; // Amount of time (s) after going offscreen to continue existing
     private int maxHp = 1;
 
     void Start()
