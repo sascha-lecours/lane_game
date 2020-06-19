@@ -234,8 +234,9 @@ MonoBehaviour:
   active: 0
   manualActivation: 0
   immuneToShots: 0
-  damagedSprite: {fileID: 0}
-  deathExplosion: {fileID: 0}
+  damagedSprite: {fileID: 21300000, guid: f2dd91c7543e4b94eb49c15515b5d4d3, type: 3}
+  deathExplosion: {fileID: 4944700719120948, guid: cabe633cfc32fe0488fd2890d74266f7,
+    type: 3}
 --- !u!50 &7352479403659095015
 Rigidbody2D:
   serializedVersion: 4

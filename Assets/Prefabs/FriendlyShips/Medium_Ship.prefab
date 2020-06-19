@@ -375,7 +375,7 @@ MonoBehaviour:
   active: 0
   manualActivation: 0
   immuneToShots: 0
-  damagedSprite: {fileID: 0}
+  damagedSprite: {fileID: 21300000, guid: 494d2885fd3f2f14daffe91f56cbfb86, type: 3}
   deathExplosion: {fileID: 0}
 --- !u!114 &8805503776283662160
 MonoBehaviour:
