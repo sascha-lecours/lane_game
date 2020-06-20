@@ -46,7 +46,7 @@ public class FriendlySpawnerScript : MonoBehaviour
     public Transform unitType1;
     public Transform unitType2;
 
-    public float spawnInterval1 = 0.45f;
+    public float spawnInterval1 = 0.65f;
     public float spawnInterval2 = 0.25f;
 
     public float rebuildTime1 = 2.5f;
@@ -68,6 +68,11 @@ public class FriendlySpawnerScript : MonoBehaviour
     public int curSupply2;
 
     public Text txt = null;
+    public Image[] shipIcons1 = null;
+    public Image[] shipIcons2 = null;
+
+    public float iconAlphaFull = 0.8f;
+    public float iconAlphaEmpty = 0.35f;
 
 
 
@@ -79,13 +84,31 @@ public class FriendlySpawnerScript : MonoBehaviour
         AdjustUI();
     }
 
+    void AdjustIcons(Image[] iconArray, int currentCount)
+    {
+        for (var i = 0; i < iconArray.Length; i++)
+        {
+            if (currentCount > i)
+            {
+                iconArray[i].color = new Color(1f, 1f, 1f, iconAlphaFull);
+            }
+            else
+            {
+                iconArray[i].color = new Color(1f, 1f, 1f, iconAlphaEmpty);
+            }
+        }
+    }
+
     void AdjustUI()
     {
         var ship1 = Spawnables[0].CurSupply;
         var shipMax1 = Spawnables[0].MaxSupply;
         var ship2 = Spawnables[1].CurSupply;
         var shipMax2 = Spawnables[1].MaxSupply;
-        txt.text = $"Gunboats: {ship1}/{shipMax1}\nTorpedoes: {ship2}/{shipMax2}";
+        // txt.text = $"Gunboats: {ship1}/{shipMax1}\nTorpedoes: {ship2}/{shipMax2}";
+        txt.text = "";
+        AdjustIcons(shipIcons1, ship1);
+        AdjustIcons(shipIcons2, ship2);
     }
 
     void spawnUnit(Transform s)
