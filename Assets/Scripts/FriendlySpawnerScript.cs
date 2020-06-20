@@ -72,7 +72,7 @@ public class FriendlySpawnerScript : MonoBehaviour
     public Image[] shipIcons2 = null;
 
     public float iconAlphaFull = 0.8f;
-    public float iconAlphaEmpty = 0.35f;
+    public float iconAlphaEmpty = 0.1f;
 
 
 
