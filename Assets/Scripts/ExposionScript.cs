@@ -5,6 +5,8 @@ using UnityEngine;
 public class ExposionScript : MonoBehaviour
 {
     public float shakeMagnitude = 0.5f;
+    public bool underwaterSound = false;
+    public float explosionVolume = 1f;
 
     void Start()
     {
@@ -12,7 +14,15 @@ public class ExposionScript : MonoBehaviour
         Destroy(gameObject, 3); // 3sec
 
         // Explosion Sound
-        SoundEffectsHelper.Instance.MakeExplosionSound();
+        if (underwaterSound)
+        {
+            SoundEffectsHelper.Instance.MakeUnderwaterExplosionSound(explosionVolume);
+        }
+        else
+        {
+            SoundEffectsHelper.Instance.MakeExplosionSound(explosionVolume);
+        }
+        
 
         // Add screenshake
         Camera.main.GetComponent<CameraShakeScript>().addShake(shakeMagnitude); 

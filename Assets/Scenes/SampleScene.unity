@@ -641,10 +641,10 @@ MonoBehaviour:
   spawnInterval2: 0.25
   rebuildTime1: 4
   rebuildTime2: 3
-  maxSupply1: 4
-  maxSupply2: 6
-  startSupply1: 3
-  startSupply2: 3
+  maxSupply1: 3
+  maxSupply2: 5
+  startSupply1: 2
+  startSupply2: 4
   curSupply1: 0
   curSupply2: 0
   txt: {fileID: 99285882}
@@ -1133,6 +1133,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3111977174953217813, guid: ee45634fde2d5bf4ca71cfbb11a7625e,
+        type: 3}
+      propertyPath: underwaterExplosionSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111977174953217813, guid: ee45634fde2d5bf4ca71cfbb11a7625e,
+        type: 3}
+      propertyPath: underwaterExplosionSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2892cb0e44d3529439886d6a4c35aa66, type: 3}
+    - target: {fileID: 3111977174953217813, guid: ee45634fde2d5bf4ca71cfbb11a7625e,
+        type: 3}
+      propertyPath: underwaterExplosionSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: afb2c0000d26258488d7936720d40a85, type: 3}
+    - target: {fileID: 3111977174953217813, guid: ee45634fde2d5bf4ca71cfbb11a7625e,
+        type: 3}
+      propertyPath: underwaterExplosionSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 007ba05e96ccfc341b966ec2586f52e3, type: 3}
     - target: {fileID: 3111977174953217814, guid: ee45634fde2d5bf4ca71cfbb11a7625e,
         type: 3}
       propertyPath: m_LocalPosition.x

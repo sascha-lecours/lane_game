@@ -9,6 +9,7 @@ public class SoundEffectsHelper : MonoBehaviour
     public static SoundEffectsHelper Instance;
 
     public AudioClip[] explosionSounds;
+    public AudioClip[] underwaterExplosionSounds;
     public AudioClip[] playerShotSounds;
     public AudioClip[] hitHurtSounds;
     public float playerShotVolume = 0.4f;
@@ -31,10 +32,16 @@ public class SoundEffectsHelper : MonoBehaviour
         MusicPlayer = GetComponent<AudioSource>();
     }
 
-    public void MakeExplosionSound()
+    public void MakeExplosionSound(float volume)
     {
         var i = Random.Range(0, (explosionSounds.Length - 1));
-        MakeSound(explosionSounds[i]);
+        MakeSound(explosionSounds[i], volume);
+    }
+
+    public void MakeUnderwaterExplosionSound(float volume)
+    {
+        var i = Random.Range(0, (underwaterExplosionSounds.Length - 1));
+        MakeSound(underwaterExplosionSounds[i], volume);
     }
 
     public void MakePlayerShotSound()

@@ -4826,3 +4826,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeMagnitude: 0.35
+  underwaterSound: 1
