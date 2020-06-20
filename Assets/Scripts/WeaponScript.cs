@@ -115,6 +115,9 @@ public class WeaponScript : MonoBehaviour
             if (shotSound != null)
             {
                 SoundEffectsHelper.Instance.MakePassedInSound(shotSound);
+            } else
+            {
+                SoundEffectsHelper.Instance.MakeShipFiringSound();
             }
         }
     }

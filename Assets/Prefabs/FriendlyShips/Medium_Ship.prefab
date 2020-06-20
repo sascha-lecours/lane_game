@@ -152,7 +152,7 @@ MonoBehaviour:
   shotOriginOffset: {x: 0, y: 0, z: 0}
   bulletSpread: 0
   initialShotDelay: 0.01
-  shotSound: {fileID: 8300000, guid: a36250c66c1ba734eba03de7ca14a174, type: 3}
+  shotSound: {fileID: 0}
   aimAtTargetObject: 1
   myTarget: {fileID: 0}
 --- !u!212 &8805503775816859474
@@ -454,7 +454,7 @@ MonoBehaviour:
   shotOriginOffset: {x: 0, y: 0, z: 0}
   bulletSpread: 0
   initialShotDelay: 0.2
-  shotSound: {fileID: 8300000, guid: a36250c66c1ba734eba03de7ca14a174, type: 3}
+  shotSound: {fileID: 0}
   aimAtTargetObject: 1
   myTarget: {fileID: 0}
 --- !u!212 &8805503776524743788

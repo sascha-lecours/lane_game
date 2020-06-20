@@ -10,9 +10,9 @@ public class SoundEffectsHelper : MonoBehaviour
 
     public AudioClip[] explosionSounds;
     public AudioClip[] underwaterExplosionSounds;
-    public AudioClip[] playerShotSounds;
+    public AudioClip[] shipFiringShotSounds;
     public AudioClip[] hitHurtSounds;
-    public float playerShotVolume = 0.4f;
+    public float shipFiringVolume = 1f;
     private float hitHurtVolume = 1f;
     private AudioSource MusicPlayer;
 
@@ -44,16 +44,17 @@ public class SoundEffectsHelper : MonoBehaviour
         MakeSound(underwaterExplosionSounds[i], volume);
     }
 
-    public void MakePlayerShotSound()
-    {
-        var i = Random.Range(0, (playerShotSounds.Length - 1));
-        MakeSound(playerShotSounds[i], playerShotVolume);
-    }
 
     public void MakeHitHurtSound()
     {
         var i = Random.Range(0, (hitHurtSounds.Length - 1));
         MakeSound(hitHurtSounds[i], hitHurtVolume);
+    }
+
+    public void MakeShipFiringSound()
+    {
+        var i = Random.Range(0, (shipFiringShotSounds.Length - 1));
+        MakeSound(shipFiringShotSounds[i], shipFiringVolume);
     }
 
     public void MakePassedInSound(AudioClip sound)
