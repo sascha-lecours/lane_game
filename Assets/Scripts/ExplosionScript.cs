@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExposionScript : MonoBehaviour
+public class ExplosionScript : MonoBehaviour
 {
     public float shakeMagnitude = 0.5f;
     public bool underwaterSound = false;
