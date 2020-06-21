@@ -20,6 +20,8 @@ public class HealthScript : MonoBehaviour
     private Material matWhite;
     private Material matDefault;
     private SpriteRenderer sr;
+    private float minLifeTime = 2f;
+    private float lifeTimer = 0f;
     private float flashInterval = 0.1f;
     private float fadeLifetime = 0.5f; // Amount of time (s) after going offscreen to continue existing
     private int maxHp = 1;
@@ -75,6 +77,11 @@ public class HealthScript : MonoBehaviour
         sr.material = matDefault;
     }
 
+    private void Update()
+    {
+        lifeTimer += Time.deltaTime;
+    }
+
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
         // Is this a shot?
@@ -104,7 +111,7 @@ public class HealthScript : MonoBehaviour
     void OnTriggerExit2D(Collider2D otherCollider)
     {
         ActivatorScript activator = otherCollider.gameObject.GetComponent<ActivatorScript>();
-        if (activator != null && !manualActivation && active)
+        if (activator != null && !manualActivation && active && (lifeTimer > minLifeTime))
         {
             active = false;
             Invoke("fadeAway", fadeLifetime); // Vanish without explosion after a short time
