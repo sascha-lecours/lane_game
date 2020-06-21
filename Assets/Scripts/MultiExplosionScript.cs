@@ -8,6 +8,7 @@ public class MultiExplosionScript : MonoBehaviour
     public float explosionInterval = 0.5f;
     public float explosionRangeX = 1f;
     public float explosionRangeY = 0.6f;
+    public float slowTime = 0f; // seconds
 
     private float timeKeeper = 0f;
     private int index = 0;
@@ -17,6 +18,7 @@ public class MultiExplosionScript : MonoBehaviour
     void Start()
     {
         myTransform = GetComponent<Transform>();
+        TimeHelperScript.Instance.AddSlowTime(slowTime);
     }
 
     // Update is called once per frame
