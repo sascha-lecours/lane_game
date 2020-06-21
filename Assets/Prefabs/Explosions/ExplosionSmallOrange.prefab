@@ -4828,4 +4828,4 @@ MonoBehaviour:
   shakeMagnitude: 0.35
   underwaterSound: 0
   explosionVolume: 1
-  slowTime: 0.1
+  slowTime: 0.05
