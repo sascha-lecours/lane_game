@@ -996,7 +996,7 @@ MonoBehaviour:
     type: 3}
   spawnInterval1: 0.45
   spawnInterval2: 0.25
-  rebuildTime1: 4
+  rebuildTime1: 5
   rebuildTime2: 3
   maxSupply1: 3
   maxSupply2: 5
