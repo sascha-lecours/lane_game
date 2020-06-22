@@ -7,7 +7,7 @@ public class TimeHelperScript : MonoBehaviour
     public static TimeHelperScript Instance;
 
     private float slowTimeRemaining = 0f;
-    private float slowFraction = 0.4f; // Lowest it gets
+    private float slowFraction = 0.1f; // Lowest it gets
     public float timeResetSpeed = 30f; // Controls rate of return to normal speed once slowime elapsed.
 
     private float roundUpThreshhold = 0.95f;
@@ -25,7 +25,7 @@ public class TimeHelperScript : MonoBehaviour
 
     public void AddSlowTime(float slowTimeToAdd)
     {
-        slowTimeRemaining += slowTimeToAdd;
+        slowTimeRemaining += slowTimeToAdd * slowFraction; // Multiplying by slowfractino ensures that you can use reatime numbers
     }
 
     // Update is called once per frame
