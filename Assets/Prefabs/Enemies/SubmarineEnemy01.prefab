@@ -133,6 +133,8 @@ MonoBehaviour:
   active: 0
   manualActivation: 0
   immuneToShots: 1
+  fadeScore: 0
+  dieScore: 30
   damagedSprite: {fileID: 0}
   deathExplosion: {fileID: 6407730346979599315, guid: beb2c95802823ba4bb1f3b0a3104226f,
     type: 3}

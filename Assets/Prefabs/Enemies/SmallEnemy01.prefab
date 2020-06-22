@@ -234,6 +234,8 @@ MonoBehaviour:
   active: 0
   manualActivation: 0
   immuneToShots: 0
+  fadeScore: 0
+  dieScore: 10
   damagedSprite: {fileID: 21300000, guid: f2dd91c7543e4b94eb49c15515b5d4d3, type: 3}
   deathExplosion: {fileID: 4944700719120948, guid: cabe633cfc32fe0488fd2890d74266f7,
     type: 3}

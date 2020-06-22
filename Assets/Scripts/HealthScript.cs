@@ -13,6 +13,8 @@ public class HealthScript : MonoBehaviour
     public bool active = false;
     public bool manualActivation = false; // Used for bosses etc. to prevent activation by the usual method
     public bool immuneToShots = false;
+    public int fadeScore = 0;
+    public int dieScore = 0;
     public Sprite damagedSprite = null;
 
     public Transform deathExplosion;
@@ -59,6 +61,7 @@ public class HealthScript : MonoBehaviour
                 deathExplosionTransform.position = transform.position;
             }
 
+            if (dieScore > 0) { ScoreKeeperScript.Instance.AddPoints(dieScore); }
             Destroy(gameObject);
         }
         else
@@ -115,6 +118,7 @@ public class HealthScript : MonoBehaviour
         {
             active = false;
             Invoke("fadeAway", fadeLifetime); // Vanish without explosion after a short time
+            if (fadeScore > 0) { ScoreKeeperScript.Instance.AddPoints(fadeScore); }
         }
     }
 }
