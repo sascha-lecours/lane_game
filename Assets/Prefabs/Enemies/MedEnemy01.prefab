@@ -33,7 +33,7 @@ Transform:
   m_LocalPosition: {x: 3.01, y: -3.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6083977443173554585}
+  - {fileID: 26728906583010177}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -186,7 +186,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.31173325, y: 1.5109026}
   m_EdgeRadius: 0
---- !u!1 &6083977443173554586
+--- !u!1 &6404867556664296590
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,23 +194,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6083977443173554585}
-  - component: {fileID: 6083977443173554584}
-  - component: {fileID: 6083977443173554587}
+  - component: {fileID: 26728906583010177}
+  - component: {fileID: 5474864391842615277}
+  - component: {fileID: 3616850177691588278}
   m_Layer: 0
-  m_Name: water_ripple_small
+  m_Name: water_ripple_medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6083977443173554585
+--- !u!4 &26728906583010177
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6083977443173554586}
+  m_GameObject: {fileID: 6404867556664296590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -218,13 +218,13 @@ Transform:
   m_Father: {fileID: 3632118259401616235}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6083977443173554584
+--- !u!212 &5474864391842615277
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6083977443173554586}
+  m_GameObject: {fileID: 6404867556664296590}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -257,28 +257,28 @@ SpriteRenderer:
   m_SortingLayerID: -411926925
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f8bcfe76591836b49928045b7a1411dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4c2bd67b77b69245b91d0cadb678699, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 1.68}
+  m_Size: {x: 0.84, y: 2.26}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6083977443173554587
+--- !u!95 &3616850177691588278
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6083977443173554586}
+  m_GameObject: {fileID: 6404867556664296590}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa4f14c2c27d688459501a5a646721ca, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5cb3dcd2cb0497a48ba3e4dd4ceb1382, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

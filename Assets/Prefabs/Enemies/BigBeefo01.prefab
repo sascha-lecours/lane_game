@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4128629287550031507}
   - component: {fileID: 4128629287550031504}
   m_Layer: 0
-  m_Name: water_ripple_small
+  m_Name: water_ripple_large
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ Animator:
   m_GameObject: {fileID: 4128629287550031505}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa4f14c2c27d688459501a5a646721ca, type: 2}
+  m_Controller: {fileID: 9100000, guid: a39a0b715b1ddc24abbbdadc35f70ea8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -236,7 +236,7 @@ MonoBehaviour:
   immuneToShots: 0
   fadeScore: 0
   damagedFadeScore: 0
-  dieScore: 50
+  dieScore: 60
   damagedSprite: {fileID: 21300000, guid: 8c215f045a9516c4e988a0ef75a09b23, type: 3}
   deathExplosion: {fileID: 1546785278402420866, guid: c37aa85ba9da40f4bb44be6e0ba329fd,
     type: 3}
