@@ -17,7 +17,7 @@ TagManager:
   - FriendlyTorpedoes
   - ShippingLane
   - FriendlyConvoys
-  - 
+  - Aircraft
   - 
   - 
   - 
@@ -58,6 +58,9 @@ TagManager:
     locked: 0
   - name: Guns
     uniqueID: 3924430093
+    locked: 0
+  - name: SAM
+    uniqueID: 329699917
     locked: 0
   - name: Aircraft
     uniqueID: 2377636073

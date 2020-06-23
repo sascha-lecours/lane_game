@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 4375819373184880, guid: 478afe2e1fec9e1459e1bb46d8949fce, type: 3}
-  shootingRate: 1
+  shootingRate: 1.1
   shotless: 0
   randomizeShotStart: 0
   shotOriginOffset: {x: 0, y: 0, z: 0}
@@ -155,6 +155,8 @@ MonoBehaviour:
   shotSound: {fileID: 0}
   aimAtTargetObject: 1
   myTarget: {fileID: 0}
+  shotEffect: {fileID: 1286208973191736672, guid: 83bcd27b53cbb4649aecfcf09066d2e1,
+    type: 3}
 --- !u!212 &8805503775816859474
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -453,7 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 4375819373184880, guid: 478afe2e1fec9e1459e1bb46d8949fce, type: 3}
-  shootingRate: 1
+  shootingRate: 1.1
   shotless: 0
   randomizeShotStart: 0
   shotOriginOffset: {x: 0, y: 0, z: 0}
@@ -462,6 +464,8 @@ MonoBehaviour:
   shotSound: {fileID: 0}
   aimAtTargetObject: 1
   myTarget: {fileID: 0}
+  shotEffect: {fileID: 1286208973191736672, guid: 83bcd27b53cbb4649aecfcf09066d2e1,
+    type: 3}
 --- !u!212 &8805503776524743788
 SpriteRenderer:
   m_ObjectHideFlags: 0

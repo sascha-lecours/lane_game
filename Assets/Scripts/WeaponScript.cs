@@ -15,6 +15,7 @@ public class WeaponScript : MonoBehaviour
     public AudioClip shotSound = null;
     public bool aimAtTargetObject = false;
     public Transform myTarget = null;
+    public Transform shotEffect = null;
 
     private HealthScript myHealthscript = null;
     private Vector2 tempShotDirection = new Vector2(0, -1);
@@ -109,10 +110,14 @@ public class WeaponScript : MonoBehaviour
                 }
             }
 
+            if (shotEffect != null)
+            {
+                var shotEffectTransform = Instantiate(shotEffect) as Transform;
+                shotEffectTransform.position = transform.position + shotOriginOffset;
+            }
 
 
-
-            if (shotSound != null)
+                if (shotSound != null)
             {
                 SoundEffectsHelper.Instance.MakePassedInSound(shotSound);
             } else

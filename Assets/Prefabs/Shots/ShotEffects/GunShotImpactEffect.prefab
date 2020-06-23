@@ -4825,7 +4825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eccde4c8a46b094f89fb2111bc2ab9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeMagnitude: 0
+  shakeMagnitude: 0.06
   underwaterSound: 0
   explosionVolume: 0
   slowTime: 0
