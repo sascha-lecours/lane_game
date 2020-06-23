@@ -7,6 +7,7 @@ public class FriendlyShipScript : MonoBehaviour
 {
     public Transform myDestination = null;
     public bool cargoShip = false;
+    public int collisionDamage = 10;
 
     private MoveScript myMoveScript = null;
 
@@ -61,7 +62,7 @@ public class FriendlyShipScript : MonoBehaviour
         {
             // Kill the enemy
             HealthScript enemyHealth = enemy.GetComponent<HealthScript>();
-            if (enemyHealth != null) enemyHealth.Damage(100);
+            if (enemyHealth != null) enemyHealth.Damage(collisionDamage);
 
             tookDamage = true;
             damageAmount = enemy.collisionDamage;

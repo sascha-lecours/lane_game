@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6411013409882830715
+--- !u!1 &792203716403494166
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6407730346979599315}
-  - component: {fileID: 4431494619971076051}
+  - component: {fileID: 792203716403494167}
+  - component: {fileID: 792203716403494184}
   m_Layer: 0
-  m_Name: ExplosionMultiWhite
+  m_Name: BigBeefoSpawner01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6407730346979599315
+--- !u!4 &792203716403494167
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6411013409882830715}
+  m_GameObject: {fileID: 792203716403494166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.050277, y: -0.6858853, z: -10.35973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4431494619971076051
+--- !u!114 &792203716403494184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6411013409882830715}
+  m_GameObject: {fileID: 792203716403494166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0292419b9fa94c4ea6a07ab8572fa39, type: 3}
+  m_Script: {fileID: 11500000, guid: 40cc2eb64fdfe7f4d9a378dd702cdefa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosions:
-  - {fileID: 4840303312670430898, guid: b032938a5a7b04743a3904a9e84fe8a2, type: 3}
-  - {fileID: 4840303312670430898, guid: b032938a5a7b04743a3904a9e84fe8a2, type: 3}
-  - {fileID: 4840303312670430898, guid: b032938a5a7b04743a3904a9e84fe8a2, type: 3}
-  explosionInterval: 0.1
-  explosionRangeX: 1
-  explosionRangeY: 0.2
-  slowTime: 0
+  enemies:
+  - {fileID: 6864215247847105632, guid: 53dca47b28cbcd64185de0fc70ee551a, type: 3}
+  yAxisVariance: 5
+  xSpacing: 2

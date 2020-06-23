@@ -563,15 +563,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   easySpawns:
   - {fileID: 1702382378423205985, guid: 16261ece1c867084bbd50d34c8043a7b, type: 3}
+  - {fileID: 5308826325419672766, guid: fc186f83c7e1e104ea3edf1f1de05837, type: 3}
   mediumSpawns:
   - {fileID: 771032215213568465, guid: 40a98840c603ab34499bb853fb3f7c45, type: 3}
   - {fileID: 5578065926358060367, guid: 1769981baeed0124f9ab108ae771e8f6, type: 3}
+  - {fileID: 8535186835375447531, guid: 9177c95496d95784dae54ddbdb544452, type: 3}
   hardSpawns:
   - {fileID: 8142654947196694284, guid: f0bddb5ddfe0f6442b121bdb770d6f00, type: 3}
   - {fileID: 2584848519307656394, guid: 0f4795c72bb0ea643be8e3b9f8a3b0ec, type: 3}
+  - {fileID: 792203716403494167, guid: a528410194150b74786934ca7b46be35, type: 3}
+  - {fileID: 5871774766344163318, guid: ef5137e3e9947b3489e52bb3223e32b7, type: 3}
   numberOfEasyWaves: 4
-  numberOfMediumWaves: 10
-  numberOfHardWaves: 10
+  numberOfMediumWaves: 7
+  numberOfHardWaves: 40
   initialSpawnInterval: 4.5
 --- !u!4 &234005393
 Transform:

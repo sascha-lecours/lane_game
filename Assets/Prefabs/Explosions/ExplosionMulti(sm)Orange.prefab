@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1541325586064716842
+--- !u!1 &163186887232027350
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1546785278402420866}
-  - component: {fileID: 8134707290157710466}
+  - component: {fileID: 168722173531663998}
+  - component: {fileID: 7477219762180567678}
   m_Layer: 0
-  m_Name: ExplosionMultiOrange
+  m_Name: ExplosionMulti(sm)Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1546785278402420866
+--- !u!4 &168722173531663998
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541325586064716842}
+  m_GameObject: {fileID: 163186887232027350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.432499, y: -4.355506, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8134707290157710466
+--- !u!114 &7477219762180567678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541325586064716842}
+  m_GameObject: {fileID: 163186887232027350}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0292419b9fa94c4ea6a07ab8572fa39, type: 3}
@@ -47,9 +47,7 @@ MonoBehaviour:
   - {fileID: 4944700719120948, guid: cabe633cfc32fe0488fd2890d74266f7, type: 3}
   - {fileID: 4944700719120948, guid: cabe633cfc32fe0488fd2890d74266f7, type: 3}
   - {fileID: 6335098959265849891, guid: 1350115e8cac932478575c50ff7c901b, type: 3}
-  - {fileID: 4944700719120948, guid: cabe633cfc32fe0488fd2890d74266f7, type: 3}
-  - {fileID: 6335098959265849891, guid: 1350115e8cac932478575c50ff7c901b, type: 3}
-  explosionInterval: 0.1
+  explosionInterval: 0.15
   explosionRangeX: 0.2
-  explosionRangeY: 1.3
-  slowTime: 0.2
+  explosionRangeY: 1
+  slowTime: 0
