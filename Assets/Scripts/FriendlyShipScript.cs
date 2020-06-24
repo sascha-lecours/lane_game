@@ -8,6 +8,7 @@ public class FriendlyShipScript : MonoBehaviour
     public Transform myDestination = null;
     public bool cargoShip = false;
     public int collisionDamage = 10;
+    public bool comeFromBelowNav = false;
 
     private MoveScript myMoveScript = null;
 
@@ -26,11 +27,19 @@ public class FriendlyShipScript : MonoBehaviour
         }
         myMoveScript = GetComponent<MoveScript>();
 
+        if (comeFromBelowNav)
+        {
+            var tempPosition = new Vector3(myDestination.position.x, transform.position.y, transform.position.z);
+            transform.position = tempPosition;
+        }
+
         if (myDestination != null && myMoveScript != null)
         {
             myMoveScript.direction = GetVector2PointingAtTarget(myDestination);
             FaceTowardObject(myDestination);
         }
+
+
 
     }
 

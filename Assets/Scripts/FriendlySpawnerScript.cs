@@ -41,35 +41,44 @@ public class PlayerSpawnableType
 
 public class FriendlySpawnerScript : MonoBehaviour
 {
-    private PlayerSpawnableType[] Spawnables = { null, null };
+    private PlayerSpawnableType[] Spawnables = { null, null, null };
 
     public Transform unitType1;
     public Transform unitType2;
+    public Transform unitType3;
 
     public float spawnInterval1 = 0.65f;
     public float spawnInterval2 = 0.25f;
+    public float spawnInterval3 = 1f;
 
     public float rebuildTime1 = 2.5f;
     public float rebuildTime2 = 1.5f;
+    public float rebuildTime3 = 15f;
 
     public int maxSupply1 = 6;
     public int maxSupply2 = 4;
+    public int maxSupply3 = 1;
 
     public int startSupply1 = 4;
     public int startSupply2 = 2;
+    public int startSupply3 = 1;
 
     private float spawnCooldown1;
     private float spawnCooldown2;
+    private float spawnCooldown3;
 
     private float rebuildTimer1;
     private float rebuildTimer2;
+    private float rebuildTimer3;
 
     public int curSupply1;
     public int curSupply2;
+    public int curSupply3;
 
     public Text txt = null;
     public Image[] shipIcons1 = null;
     public Image[] shipIcons2 = null;
+    public Image[] shipIcons3 = null;
 
     public float iconAlphaFull = 0.8f;
     public float iconAlphaEmpty = 0.1f;
@@ -81,6 +90,7 @@ public class FriendlySpawnerScript : MonoBehaviour
     {
         Spawnables[0] = new PlayerSpawnableType(unitType1, spawnInterval1, rebuildTime1, maxSupply1, startSupply1);
         Spawnables[1] = new PlayerSpawnableType(unitType2, spawnInterval2, rebuildTime2, maxSupply2, startSupply2);
+        Spawnables[2] = new PlayerSpawnableType(unitType3, spawnInterval3, rebuildTime3, maxSupply3, startSupply3);
         AdjustUI();
     }
 
@@ -105,10 +115,13 @@ public class FriendlySpawnerScript : MonoBehaviour
         var shipMax1 = Spawnables[0].MaxSupply;
         var ship2 = Spawnables[1].CurSupply;
         var shipMax2 = Spawnables[1].MaxSupply;
+        var ship3 = Spawnables[2].CurSupply;
+        var shipMax3 = Spawnables[2].MaxSupply;
         // txt.text = $"Gunboats: {ship1}/{shipMax1}\nTorpedoes: {ship2}/{shipMax2}";
         txt.text = "";
         AdjustIcons(shipIcons1, ship1);
         AdjustIcons(shipIcons2, ship2);
+        AdjustIcons(shipIcons3, ship3);
     }
 
     void spawnUnit(Transform s)
@@ -171,6 +184,10 @@ public class FriendlySpawnerScript : MonoBehaviour
         if (Input.GetKeyDown("2"))
         {
             TrytoSpawn(1);
+        }
+        if (Input.GetKeyDown("3"))
+        {
+            TrytoSpawn(2);
         }
     }
 }

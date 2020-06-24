@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7714906771654565566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.0280924, y: -0.1326107, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 7714906771724891813}
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1917331223
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a8da8903bddd94c498dbe27ea3286407, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4736b440c87318b43923eb01774187f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: {x: 1, y: 1}
-  speed: {x: 1, y: 1}
+  startSpeed: {x: 4, y: 4}
+  speed: {x: 4, y: 4}
   direction: {x: 0.9, y: -0.1}
   acceleration: 200
 --- !u!50 &7714906771654565563
@@ -201,6 +201,7 @@ MonoBehaviour:
   myDestination: {fileID: 0}
   cargoShip: 0
   collisionDamage: 10
+  comeFromBelowNav: 1
 --- !u!1 &7714906771724891812
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +214,7 @@ GameObject:
   - component: {fileID: 7714906771724891815}
   - component: {fileID: 7714906771724891814}
   m_Layer: 8
-  m_Name: MediumGunFore
+  m_Name: MissileLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,8 +246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb51ac58a5dab24d94c80352b1bc035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 4375819373184880, guid: 478afe2e1fec9e1459e1bb46d8949fce, type: 3}
-  shootingRate: 0.4
+  shotPrefab: {fileID: 366592573207356697, guid: dd72d0bb320e1364bbfc38a05a0829d6,
+    type: 3}
+  shootingRate: 0.35
   shotless: 0
   randomizeShotStart: 0
   shotOriginOffset: {x: 0, y: 0, z: 0}
