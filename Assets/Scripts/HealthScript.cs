@@ -17,6 +17,7 @@ public class HealthScript : MonoBehaviour
     public int damagedFadeScore = 0;
     public int dieScore = 0;
     public Sprite damagedSprite = null;
+    public bool cargoShip = false;
 
     public Transform deathExplosion;
 
@@ -61,7 +62,7 @@ public class HealthScript : MonoBehaviour
                 var deathExplosionTransform = Instantiate(deathExplosion) as Transform;
                 deathExplosionTransform.position = transform.position;
             }
-
+            if (cargoShip) { ScoreKeeperScript.Instance.LoseCargoShip(); }
             if (dieScore > 0) { ScoreKeeperScript.Instance.AddPoints(dieScore); }
             Destroy(gameObject);
         }

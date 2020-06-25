@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: 2360457450815856770
     second: Green_Crosshair
+  - first:
+      213: -4515341924469587773
+    second: Tokens_0
+  - first:
+      213: 5619258906214187582
+    second: Explosion_icon
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,6 +136,48 @@ TextureImporter:
       bones: []
       spriteID: 280ad479b8702c020800000000000000
       internalID: 2360457450815856770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tokens_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 17
+        width: 52
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0cf8861784651c0800000000000000
+      internalID: -4515341924469587773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion_icon
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 2
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32c8ddf33e9bfd40800000000000000
+      internalID: 5619258906214187582
       vertices: []
       indices: 
       edges: []

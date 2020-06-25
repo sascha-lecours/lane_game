@@ -177,11 +177,11 @@ public class FriendlySpawnerScript : MonoBehaviour
         IncrementTimersAndBuild();
         
 
-        if (Input.GetKeyDown("1"))
+        if (Input.GetKeyDown("2")) // Swapped boats and torpedoes in terms of key assignment
         {
             TrytoSpawn(0);
         }
-        if (Input.GetKeyDown("2"))
+        if (Input.GetKeyDown("1"))
         {
             TrytoSpawn(1);
         }
