@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 964122899}
   - component: {fileID: 964122898}
   - component: {fileID: 964122897}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: water_ripple_small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 7352479403659095037}
   - component: {fileID: 7352479403659095015}
   - component: {fileID: 7352479403659095008}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SmallEnemy01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,8 +235,10 @@ MonoBehaviour:
   manualActivation: 0
   immuneToShots: 0
   fadeScore: 0
+  damagedFadeScore: 0
   dieScore: 10
   damagedSprite: {fileID: 21300000, guid: f2dd91c7543e4b94eb49c15515b5d4d3, type: 3}
+  cargoShip: 0
   deathExplosion: {fileID: 4944700719120948, guid: cabe633cfc32fe0488fd2890d74266f7,
     type: 3}
 --- !u!50 &7352479403659095015

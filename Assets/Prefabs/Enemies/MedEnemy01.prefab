@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3632118259401616247}
   - component: {fileID: 3632118259401616237}
   - component: {fileID: 3632118259401616234}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: MedEnemy01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,6 +137,7 @@ MonoBehaviour:
   damagedFadeScore: 0
   dieScore: 30
   damagedSprite: {fileID: 21300000, guid: 94fc73e08c9f7c54dad7256c12224c0a, type: 3}
+  cargoShip: 0
   deathExplosion: {fileID: 168722173531663998, guid: 2581b0a9197cfb14dab2dec34fe942b3,
     type: 3}
 --- !u!50 &3632118259401616237
@@ -197,7 +198,7 @@ GameObject:
   - component: {fileID: 26728906583010177}
   - component: {fileID: 5474864391842615277}
   - component: {fileID: 3616850177691588278}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: water_ripple_medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}

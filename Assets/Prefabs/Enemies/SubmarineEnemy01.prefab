@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3983626823113690146}
   - component: {fileID: 3983626823113690168}
   - component: {fileID: 3983626823113690175}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SubmarineEnemy01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,8 +134,10 @@ MonoBehaviour:
   manualActivation: 0
   immuneToShots: 1
   fadeScore: 0
+  damagedFadeScore: 0
   dieScore: 30
   damagedSprite: {fileID: 0}
+  cargoShip: 0
   deathExplosion: {fileID: 6407730346979599315, guid: beb2c95802823ba4bb1f3b0a3104226f,
     type: 3}
 --- !u!50 &3983626823113690168
@@ -196,7 +198,7 @@ GameObject:
   - component: {fileID: 294115686690586106}
   - component: {fileID: 8717071427557658995}
   - component: {fileID: 7114245239501566426}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Sub_Wake
   m_TagString: Untagged
   m_Icon: {fileID: 0}

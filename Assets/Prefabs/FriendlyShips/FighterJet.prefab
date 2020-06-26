@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7714906771654565541}
   - component: {fileID: 7714906771654565540}
   - component: {fileID: 7714906771654565542}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: FighterJet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,6 +172,7 @@ MonoBehaviour:
   damagedFadeScore: 0
   dieScore: 0
   damagedSprite: {fileID: 0}
+  cargoShip: 0
   deathExplosion: {fileID: 168722173531663998, guid: 2581b0a9197cfb14dab2dec34fe942b3,
     type: 3}
 --- !u!114 &7714906771654565540
@@ -213,7 +214,7 @@ GameObject:
   - component: {fileID: 7714906771724891813}
   - component: {fileID: 7714906771724891815}
   - component: {fileID: 7714906771724891814}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: MissileLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
