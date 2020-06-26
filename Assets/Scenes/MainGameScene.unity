@@ -646,6 +646,8 @@ MonoBehaviour:
   numberOfMediumWaves: 7
   numberOfHardWaves: 40
   initialSpawnInterval: 4.5
+  shrinkTimeInterval: 0.15
+  wavesPerIntervalShrink: 5
 --- !u!4 &234005393
 Transform:
   m_ObjectHideFlags: 0
