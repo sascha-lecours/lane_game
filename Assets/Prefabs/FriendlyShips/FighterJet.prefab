@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4736b440c87318b43923eb01774187f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: {x: 4, y: 4}
-  speed: {x: 4, y: 4}
+  startSpeed: {x: 6, y: 6}
+  speed: {x: 6, y: 6}
   direction: {x: 0.9, y: -0.1}
   acceleration: 200
 --- !u!50 &7714906771654565563
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 366592573207356697, guid: dd72d0bb320e1364bbfc38a05a0829d6,
     type: 3}
-  shootingRate: 0.35
+  shootingRate: 0.3
   shotless: 0
   randomizeShotStart: 0
   shotOriginOffset: {x: 0, y: 0, z: 0}
