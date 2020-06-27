@@ -13,6 +13,8 @@ public class ScoreKeeperScript : MonoBehaviour
     public int currentScore = 0;
     public int lostCargoShips = 0;
     private int gameOverAmount = 3; // Game over when lost cargo ships == this number
+    public GameObject gameOverMenuObject = null;
+    private bool gameOver = false;
 
     public Text score = null;
     public Text cargoShipsLostText = null;
@@ -25,11 +27,20 @@ public class ScoreKeeperScript : MonoBehaviour
     {
         lostCargoShips += 1;
         updateCargoShipsLostText();
-        if (lostCargoShips >= gameOverAmount) {
-            // TODO: Trigger game over 
-        }
         AdjustIcons(cargoShipIcons, (gameOverAmount - lostCargoShips));
 
+        if (lostCargoShips >= gameOverAmount)
+        {
+            
+            Invoke("GameOverInitiator", 0.2f);
+        }
+
+    }
+
+    private void GameOverInitiator()
+    {
+        gameOver = true;
+        gameOverMenuObject.SetActive(true);
     }
 
     void AdjustIcons(Image[] iconArray, int currentCount)
@@ -55,8 +66,11 @@ public class ScoreKeeperScript : MonoBehaviour
 
     public void AddPoints(int pointsToAdd)
     {
-        currentScore += pointsToAdd;
-        score.text = currentScore.ToString();
+        if (!gameOver)
+        {
+            currentScore += pointsToAdd;
+            score.text = currentScore.ToString();
+        }
     }
 
     void Awake()
