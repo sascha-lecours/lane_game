@@ -681,7 +681,7 @@ MonoBehaviour:
   - {fileID: 2584848519307656394, guid: 0f4795c72bb0ea643be8e3b9f8a3b0ec, type: 3}
   - {fileID: 792203716403494167, guid: a528410194150b74786934ca7b46be35, type: 3}
   - {fileID: 5871774766344163318, guid: ef5137e3e9947b3489e52bb3223e32b7, type: 3}
-  numberOfEasyWaves: 4
+  numberOfEasyWaves: 6
   numberOfMediumWaves: 7
   numberOfHardWaves: 40
   initialSpawnInterval: 4.5
@@ -741,7 +741,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0.042792797, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.042792797, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1273,7 +1273,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3901,7 +3901,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0.4481132, b: 0.8639731, a: 1}
+  m_Color: {r: 1, g: 0.4481132, b: 0.8639731, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
