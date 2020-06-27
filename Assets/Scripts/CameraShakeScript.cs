@@ -39,13 +39,12 @@ public class CameraShakeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        moveCamera();
-        reduceShake();
-
-        if (Input.GetKeyDown("q")) // For debugging
+        
+        if (shakeMagnitude >= shakeMin)
         {
-            addShake(0.5f);
+            moveCamera();
+            reduceShake();
         }
+        
     }
 }

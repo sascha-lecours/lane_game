@@ -2370,6 +2370,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 355252614856726188, guid: cb105a78a04283045a4bf0a025c142c6,
+        type: 3}
+      propertyPath: snapHotkey2
+      value: e
+      objectReference: {fileID: 0}
     - target: {fileID: 355252614856726190, guid: cb105a78a04283045a4bf0a025c142c6,
         type: 3}
       propertyPath: m_Name
@@ -2493,6 +2498,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6593486301991024310, guid: ebbfb426dccf24f40b8629f2ec8f81ff,
+        type: 3}
+      propertyPath: snapHotkey2
+      value: q
+      objectReference: {fileID: 0}
     - target: {fileID: 6593486301991024313, guid: ebbfb426dccf24f40b8629f2ec8f81ff,
         type: 3}
       propertyPath: m_LocalPosition.x

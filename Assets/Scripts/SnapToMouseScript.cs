@@ -4,6 +4,7 @@ using System.Collections;
 public class SnapToMouseScript : MonoBehaviour
 {
     public string snapHotkey = null;
+    public string snapHotkey2 = null;
     private Plane dragPlane;
 
     private Camera myMainCamera;
@@ -27,7 +28,7 @@ public class SnapToMouseScript : MonoBehaviour
     {
         if (snapHotkey != null)
         {
-            if (Input.GetKey(snapHotkey))
+            if (Input.GetKey(snapHotkey) || Input.GetKey(snapHotkey2))
             {
                 snapToMousePosition();
             }
