@@ -558,10 +558,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\nYOUR ORDERS:\n\n - PROTECT CONVOYS\n - SINK ENEMIES\n - KEEP A STIFF
-    UPPER LIP\n\nUse 1 2 and 3 to deploy Torpedoes, Ships, and Aircraft.\n\nLeft
-    click sets firing targets. Right click sets destination. (You can also use \"Q\"
-    and \"E\")\n\n\n"
+  m_Text: "\nYOUR ORDERS:\n\n - PROTECT CONVOYS \n - SINK ENEMIES\n - KEEP A STIFF
+    UPPER LIP\n\nUse 1, 2 and 3 to deploy Torpedoes, Ships, and Aircraft, respectively.
+    Supplies of these will replenish over time.\n\nLeft click sets firing targets.
+    Right click sets destination. (You can also use \"Q\" and \"E\")\n\nTHE ENEMY
+    WILL NOT STOP UNTIL THEY HAVE SUNK 3 OF OUR CONVOYS... HOLD OUT FOR AS LONG AS
+    YOU CAN.\n\nTip: Enemy Subs can only be hit by torpedoes or rammed by friendly
+    ships.\n\nGODSPEED\n\n"
 --- !u!222 &969185617
 CanvasRenderer:
   m_ObjectHideFlags: 0

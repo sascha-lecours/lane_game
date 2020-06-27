@@ -11,6 +11,7 @@ public class TimeHelperScript : MonoBehaviour
     public float timeResetSpeed = 15f; // Controls rate of return to normal speed once slowime elapsed.
 
     private float roundUpThreshhold = 0.95f;
+    public GameObject pauseMenuObject = null;
 
 
     void Awake()
@@ -23,9 +24,26 @@ public class TimeHelperScript : MonoBehaviour
         Instance = this;
     }
 
+    void Start()
+    {
+        ResumeGame(); // Fixes issue if game starts in paused state
+    }
+
     public void AddSlowTime(float slowTimeToAdd)
     {
         slowTimeRemaining += slowTimeToAdd * slowFraction; // Multiplying by slowfractino ensures that you can use reatime numbers
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        pauseMenuObject.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        pauseMenuObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,6 +61,11 @@ public class TimeHelperScript : MonoBehaviour
             {
                 Time.timeScale = 1;
             }
+        }
+
+        if (Input.GetKeyDown("escape"))
+        {
+            PauseGame();
         }
     }
 }
