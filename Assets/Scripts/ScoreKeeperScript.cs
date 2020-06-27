@@ -16,6 +16,10 @@ public class ScoreKeeperScript : MonoBehaviour
 
     public Text score = null;
     public Text cargoShipsLostText = null;
+    public Image[] cargoShipIcons = null;
+
+    private float iconAlphaFull = 0.8f;
+    private float iconAlphaEmpty = 0.2f;
 
     public void LoseCargoShip()
     {
@@ -24,12 +28,29 @@ public class ScoreKeeperScript : MonoBehaviour
         if (lostCargoShips >= gameOverAmount) {
             // TODO: Trigger game over 
         }
+        AdjustIcons(cargoShipIcons, (gameOverAmount - lostCargoShips));
 
+    }
+
+    void AdjustIcons(Image[] iconArray, int currentCount)
+    {
+        for (var i = 0; i < iconArray.Length; i++)
+        {
+            if (currentCount > i)
+            {
+                iconArray[i].color = new Color(1f, 1f, 1f, iconAlphaFull);
+            }
+            else
+            {
+                iconArray[i].color = new Color(1f, 1f, 1f, iconAlphaEmpty);
+            }
+        }
     }
 
     public void updateCargoShipsLostText()
     {
-        cargoShipsLostText.text = "Convoys Lost: " + lostCargoShips + "/" + gameOverAmount;
+        cargoShipsLostText.text = "";
+        // cargoShipsLostText.text = "Convoys Lost: " + lostCargoShips + "/" + gameOverAmount;
     }
 
     public void AddPoints(int pointsToAdd)
